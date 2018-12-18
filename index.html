@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Generic Trope Based Clicker Game</title>
+        <link rel="stylesheet" type="text/css" href="main.css" />
+        
+    </head>
+    <body>
+	<h1 align="center">This Isn't Even My Final Form!</h1><br/>
+
+	<div class="row">
+		<div id="leftcolumn" class="column">
+			Exp: <span id="exp">0</span><br/>
+			DeM: <span id="dem">0</span><br/>
+			Str: <span id="str">0</span><br/>
+			Mag: <span id="mag">0</span><br/>
+			Will: <span id="will">0</span><br/>
+			<br/>
+			<button onclick="trainstr()">Train Strength: <span id="strcost">10</span></button><br/>
+			<button onclick="trainmag()">Train Magic: <span id="magcost">10</span></button><br/>
+			<button onclick="trainwill()">Train Willpower: <span id="willcost">10</span></button><br/>
+            <br/>
+            <button onclick="toggleexpshop()">Special Training</button>
+            <div id="expshop" style="display:none">
+                <div>
+                    <h3>Develop Signature Move</h3>
+                    Unlock new skill. Does 25 clicks. 10 second cooldown.<br/>
+                    <button onclick="expbuy(1)">Cost: x Exp</button>
+                </div>
+                <div>
+                    <h3>Search for Family Heirloom</h3>
+                    Base click damage increases from 1 to 5.<br/>
+                    <button onclick="expbuy(2)">Cost: x Exp</button>
+                </div>
+                <div>
+                    <h3>Invoke Shadow Clone</h3>
+                    Automatically clicks once every 5 ticks<br/>
+                    <button onclick="expbuy(3)">Cost: x Exp</button>
+                </div>
+            </div>
+		<br/>
+		<button onclick="toggledemshop()">Deus Ex Machinae</button>
+	<div id="demshop" style="display:none">
+                <div>
+                    <h3>Unlock Bloodline Talent</h3>
+                    All stats multiplied by 1.1x<br/>
+                    <button onclick="dembuy(1)">Cost: 1 DeM</button>
+                </div>
+                <div>
+                    <h3>Unlock Sad Backstory</h3>
+                    All clicks are 1.5x effective<br/>
+                    <button onclick="dembuy(2)">Cost: 1 DeM</button>
+                </div>
+                <div>
+                    <h3>Power Up After Best Friend Dies</h3>
+                    All per-second mechanics are 1.5x effective<br/>
+                    <button onclick="dembuy(3)">Cost: 1 DeM</button>
+                </div>
+            </div>
+		</div>
+		<div id="middlecolumn" class="column" onclick="mainbutton()">
+			Boss HP: <span id="hp">1000</span><br/>
+            <div id="head" class="boboddy"></div>
+            <div id="top" class="boboddy"></div>
+            <div id="bottom" class="boboddy"></div>
+
+		</div>
+		<div id="rightcolumn" class="column">
+			<h2> Help </h2>
+			click boss to begin
+			<br/>
+			str = click dmg, mag = auto dmg, will = "luck"/econ/multipliers<br/>
+			currently: 1 clickdmg/ str, 1 autodmg/ mag, will decreases tick time by 0.1% multiplicatively.
+			<br/>
+			future?: make str do % increase, so base dmg upgrades mean something. make everything cost more, and mag costs even more.
+		</div>
+	</div>
+	<script type="text/javascript" src="main.js"></script>
+    <script type="text/javascript" src="boss.js"></script>
+    </body>
+</html>

@@ -1,0 +1,26 @@
+.column {
+	float: left;
+	width: 33.33%;
+	min-height: 500px;
+}
+
+#leftcolumn{
+	text-align: right;
+}
+
+#middlecolumn{
+	text-align: center;
+}
+
+.row:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.popmenu {
+    display: none;
+}
+
+.boboddy {
+}
