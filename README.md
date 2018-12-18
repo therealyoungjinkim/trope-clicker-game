@@ -1,11 +1,15 @@
 # trope-clicker-game
+
+hosted at my website:
+http://youngjin.kim/game/tropes/
+
 an abandoned javascript clicker game i made that was going to just be filled with terrible memes and cliches
 
 development came to a standstill when i fell out of love with clicker games
 
 right now i guess its a cool exquisite corpse generator (https://en.wikipedia.org/wiki/Exquisite_corpse)
 
-refresh the page for a new cool picture i guess
+*all its good for is refreshing the page to see a cool new picture*
 
 # file structure
 
